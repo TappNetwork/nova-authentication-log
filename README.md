@@ -20,5 +20,5 @@ MorphMany::make(
 
 ### Configuration (optional)
 ``` sh
-php artisan vendor:publish --tag="Tapp\NovaAuthenticationLog\ToolServiceProvider"
+php artisan vendor:publish --provider="Tapp\NovaAuthenticationLog\ToolServiceProvider" --tag="config"
 ```
