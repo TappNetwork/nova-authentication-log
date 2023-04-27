@@ -14,7 +14,7 @@ Authentication Log resource will show up in the nova sidebar
 MorphMany::make(
     'Authentication Logs',
     'authentications',
-    \Tapp\NovaAuthenticationLog\Resources\AuthenticationLog
+    \Tapp\NovaAuthenticationLog\Resources\AuthenticationLog::class
 ),
 ```
 
