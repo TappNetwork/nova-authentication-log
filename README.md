@@ -7,7 +7,7 @@ composer require tapp/nova-authentication-log
 ```
 
 ### Resource
-Authentication Log resource will show up in the nova sidebar
+Authentication Log resource will show up in the nova sidebar.  
 ![image](https://user-images.githubusercontent.com/7796074/234967365-3b005767-ef1d-497e-9f4a-837ac05848b6.png)
 ![image](https://user-images.githubusercontent.com/7796074/234967268-8659eb15-28d4-469d-bbb4-648d11013c86.png)
 
