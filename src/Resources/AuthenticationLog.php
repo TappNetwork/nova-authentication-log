@@ -36,7 +36,7 @@ class AuthenticationLog extends Resource
      */
     public static $search = [
         'id',
-        'authenticatable',
+        'authenticatable.name',
         'ip_address',
         'user_agent',
         'login_at',
