@@ -1,0 +1,30 @@
+{
+    "name": "tapp/nova-authentication-log",
+    "description": "A Laravel Nova tool.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "rappasoft/laravel-authentication-log": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tapp\\NovaAuthenticationLog\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tapp\\NovaAuthenticationLog\\ToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
