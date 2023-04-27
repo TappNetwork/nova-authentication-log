@@ -24,33 +24,6 @@ class ToolServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/nova-authentication-log.php' => config_path('nova-authentication-log.php'),
         ], 'config');
-
-        $this->app->booted(function () {
-            $this->routes();
-        });
-
-        Nova::serving(function (ServingNova $event) {
-            //
-        });
-    }
-
-    /**
-     * Register the tool's routes.
-     *
-     * @return void
-     */
-    protected function routes()
-    {
-        if ($this->app->routesAreCached()) {
-            return;
-        }
-
-        Nova::router(['nova', Authenticate::class, Authorize::class], 'nova-authentication-log')
-            ->group(__DIR__ . '/../routes/inertia.php');
-
-        Route::middleware(['nova', Authorize::class])
-            ->prefix('nova-vendor/nova-authentication-log')
-            ->group(__DIR__ . '/../routes/api.php');
     }
 
     /**

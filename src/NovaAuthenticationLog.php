@@ -3,7 +3,6 @@
 namespace Tapp\NovaAuthenticationLog;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Menu\MenuSection;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
 use Tapp\NovaAuthenticationLog\Resources\AuthenticationLog;
@@ -22,9 +21,6 @@ class NovaAuthenticationLog extends Tool
         Nova::resources([
             $this->logResource,
         ]);
-
-        Nova::script('nova-authentication-log', __DIR__ . '/../dist/js/tool.js');
-        Nova::style('nova-authentication-log', __DIR__ . '/../dist/css/tool.css');
     }
 
     /**
@@ -35,8 +31,6 @@ class NovaAuthenticationLog extends Tool
      */
     public function menu(Request $request)
     {
-        return MenuSection::make('Logins')
-            ->path('/nova-authentication-log')
-            ->icon('server');
+        //
     }
 }
