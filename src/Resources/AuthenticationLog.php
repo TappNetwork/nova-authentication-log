@@ -54,8 +54,7 @@ class AuthenticationLog extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
             MorphTo::make(__('Authenticatable'))
-                ->types($this->authenticatableResources())
-                ->sortable(),
+                ->types($this->authenticatableResources()),
             Text::make(__('Ip Address'))->sortable(),
             Text::make(__('User Agent'))->sortable(),
             DateTime::make(__('Login At'))->sortable(),
